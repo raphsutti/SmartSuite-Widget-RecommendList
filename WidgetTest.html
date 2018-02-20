@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="SMLIB_Web_JS\BootStrap\jquery.js"></script>
+    <script type="text/javascript" src="SMLIB_Web_JS\BootStrap\bootstrap.js"></script>
+    <script type="text/javascript" src="SMLIB_Web_JS\BootStrap\bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="SMLIB_Web_JS\BootStrap\bootstrap-switch.js"></script>
+    <script type="text/javascript" src="SMLIB_Web_JS\BootStrap\jquery.tzCheckbox.js"></script>
+    <script type="text/javascript" src="SMLIB_Web_JS\BootStrap\freewall.js"></script>
+    <link rel=StyleSheet href="CSS/bootstrap - Smart Library.css" type="text/css">
+    <link rel=StyleSheet href="CSS/font-awesome.css" type="text/css">
+    <link rel=StyleSheet href="CSS/datepicker.css" type="text/css">
+    <link rel=StyleSheet href="CSS/switch.css" type="text/css">
+    <link rel=StyleSheet href="CSS/jquery.tzCheckbox.css" type="text/css">
+    <script type="text/javascript">
+
+
+        var mouse = { x: 0, y: 0 };
+        document.addEventListener('mousemove', function (e) {
+            mouse.x = e.clientX || e.pageX;
+            mouse.y = e.clientY || e.pageY
+        }, false);
+
+        var SMLIB_VERSION_NUMBER = "2.0.0";
+        var SMLIB_GLOBAL_ROOT_URL = "";
+    function AttachWidgetContentList(LISTJSON) {
+        if (LISTJSON != null) {
+            for (var index = 0; index < LISTJSON.ITEMS.length; index++) {
+                switch (LISTJSON.ITEMS[index].TYPE.toUpperCase()) {
+                    case "WIDGET":
+                        break;
+                    case "CSS":
+                        $('head').append('<LINK REL=StyleSheet HREF="SMLIB_Web_JS/SMLIBFWW_WIDGET/SMLIB_FW_WIDGET_' + LISTJSON.ITEMS[index].WIDGETNAME + '/' + LISTJSON.ITEMS[index].TYPE + '/' + LISTJSON.ITEMS[index].WIDGETELEMENT + '.' + LISTJSON.ITEMS[index].FILETYPE + '?SMLIBVersion=' + SMLIB_VERSION_NUMBER + '&WIDGETVersion=' + LISTJSON.ITEMS[index].VERSION + '" TYPE="text/css">');
+                        break;
+                    default:
+                        $('head').append('<script type="text/javascript" src="SMLIB_Web_JS/SMLIBFWW_WIDGET/SMLIB_FW_WIDGET_' + LISTJSON.ITEMS[index].WIDGETNAME + '/' + LISTJSON.ITEMS[index].TYPE + '/' + LISTJSON.ITEMS[index].WIDGETELEMENT + '.' + LISTJSON.ITEMS[index].FILETYPE + '?SMLIBVersion=' + SMLIB_VERSION_NUMBER + '&WIDGETVersion=' + LISTJSON.ITEMS[index].VERSION + '" />');
+                        break;
+                }
+            }
+        }
+
+    }
+    </script>
+
+    <script type="text/javascript" src="SMLIB_Web_JS\SMLIBFWW_WIDGET\SMLIB_FW_WIDGET_RECOMMENDLIST\LOADER\SMLIBFWW_RECOMMENDLIST_L.js"></script>
+
+</head>
+<body style="overflow:hidden;">
+    <script type="text/javascript">
+        document.writeln('<div id="main" style="width:' + window.innerWidth + 'px;height:' + window.innerHeight + 'px;">  </div>');
+        $(document).ready(function () {
+            var RecommendListOption = $.fn.smlib_recommendlist_options.smlibGetDefaultOptions();
+            RecommendListOption.position = 'relative';
+            RecommendListOption.width = window.innerWidth;
+            RecommendListOption.height = window.innerHeight;
+            RecommendListOption.top = 20;
+            RecommendListOption.left = 20;
+            RecommendListOption.additional_css = '';
+            RecommendListOption.bgfile = '';
+            RecommendListOption.webroot = SMLIB_GLOBAL_ROOT_URL;
+            RecommendListOption.widgetroot = SMLIB_GLOBAL_ROOT_URL + "SMLIB_Web_JS/SMLIBFWW_WIDGET/SMLIB_FW_WIDGET_RECOMMENDLIST/";
+            RecommendListOption.getrecommendlistservice = 'http://vcld.fsdcmel.librarysolutions.com.au/VCLD_FS_TEST/SmartLibrary/Services/Search/SMLIB_SERVICE_SEARCH.asmx/GetRecommendList';
+            var RecommendList = $("#main").smlib_recommendlist(RecommendListOption);
+        });
+
+
+
+    </script>
+</body>
+</html>
