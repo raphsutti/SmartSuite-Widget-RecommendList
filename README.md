@@ -112,5 +112,8 @@ $("#main").smlib_recommendlist(
 );
 
 ```
-
+## Support
+- twang@functionalsolutions.com.au 
+- 1800 241 709 
+- 03 9079 1000
 
