@@ -36,7 +36,7 @@
 - Needs to look clean and professional.
 
 ### Service URL
-[Service URL](http://vcld.fsdcmel.librarysolutions.com.au/VCLD_FS_TEST/SmartLibrary/Services/Search/SMLIB_SERVICE_SEARCH.asmx/GetRecommendList)
+[Get Recommend List](http://vcld.fsdcmel.librarysolutions.com.au/VCLD_FS_TEST/SmartLibrary/Services/Search/SMLIB_SERVICE_SEARCH.asmx/GetRecommendList)
 ### Request Type
 - POST
 ### Request Data Type
