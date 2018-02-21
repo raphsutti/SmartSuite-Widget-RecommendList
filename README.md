@@ -17,8 +17,8 @@
 - Less available copy books comes to the top
 
 ### UI 
-- <div></div> as a container must be used.
-- <table></table> must be used as display data
+- \<div\>\<\/div\> as a container must be used.
+- \<table\>\<\/table\> must be used as display data
 - Min-width of table will be 400px;
 - BootStrap table used
 - Header of table is a info row
@@ -75,7 +75,6 @@ http://vcld.fsdcmel.librarysolutions.com.au/VCLD_FS_TEST/SmartLibrary/Services/S
                     sub-location: "Space",
                     isbn: "1869442873",
                     availablecopy: "1",
-
                     cover: "http://vcld.fsdcmel.librarysolutions.com.au/ISBNCovers/1869442873.jpg",
                     detail: "SmartLibraryPageLoader.aspx?PageName=TITLE_DETAIL&BookID=67582.01",
                 }
