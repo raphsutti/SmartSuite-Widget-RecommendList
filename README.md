@@ -36,7 +36,7 @@
 - Needs to look clean and professional.
 
 ### Service URL
-<a href="http://vcld.fsdcmel.librarysolutions.com.au/VCLD_FS_TEST/SmartLibrary/Services/Search/SMLIB_SERVICE_SEARCH.asmx/GetRecommendList" target="_blank">Get Recommend List</a>
+[Get Recommend List](http://vcld.fsdcmel.librarysolutions.com.au/VCLD_FS_TEST/SmartLibrary/Services/Search/SMLIB_SERVICE_SEARCH.asmx/GetRecommendList){:target="_blank"}
 ### Request Type
 - POST
 ### Request Data Type
