@@ -27,8 +27,8 @@
 - Refresh table every 30 seconds
 - Header clickable to launce order by different column 
 - Default order is available copies
-- Cover need to be shown in a small size (100*150) or (150*150)
-- Hover on cover will load cover bigger (200*300) or (300*300) near curse in a popup or popover
+- Cover need to be shown in a small size (100\*150) or (150\*150)
+- Hover on cover will load cover bigger (200\*300) or (300\*300) near curse in a popup or popover
 - Each row is 150px most height. Trim or hide is text is not able to fit.
 - No recommendation will show if no result return.
 - Dynamic size is configurable for container
