@@ -112,6 +112,8 @@ $("#main").smlib_recommendlist(
 );
 
 ```
+## License
+See the [LICENSE](LICENSE) file for license rights and limitations (GNU General Public License v3.0).
 ## Support
 - twang@functionalsolutions.com.au 
 - 1800 241 709 
