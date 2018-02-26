@@ -1,2 +1,5 @@
-﻿.smlib_recommendlist_maindiv {
+﻿.cover {
+	max-width: 150px;
+	max-height: 150px;
+	float:left;
 }
