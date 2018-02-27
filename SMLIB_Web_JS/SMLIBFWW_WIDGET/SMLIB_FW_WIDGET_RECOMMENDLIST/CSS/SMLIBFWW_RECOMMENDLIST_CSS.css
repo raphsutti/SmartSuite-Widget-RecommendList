@@ -2,5 +2,14 @@
 	max-width: 150px;
 	max-height: 150px;
 	float:left;
-	margin-top: 50px;
+	/*margin-top: 50px;*/
+}
+
+table {
+	min-width: 400px;
+}
+
+.title {
+	color: red;
+
 }
