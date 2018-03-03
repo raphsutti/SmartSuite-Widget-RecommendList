@@ -5,11 +5,18 @@
 	/*margin-top: 50px;*/
 }
 
-table {
+/*table {
 	min-width: 400px;
-}
+}*/
 
-.title {
+.red {
 	color: red;
-
 }
+
+.grey {
+	color: grey
+}
+
+/*#output tr {
+	line-height: 150px;
+}*/

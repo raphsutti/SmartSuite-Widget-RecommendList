@@ -6,12 +6,6 @@
 			async: false,
 			dataType: "json",
 			success: function(data){
-				// count
-				// console.log(data.count);
-				// // book1
-				// console.log(data.items[0]);
-				// // book2
-				// console.log(data.items[1]);
 
 				// Reset table to blank
 				$("#output").html("");
@@ -26,22 +20,25 @@
     				return 0;
     			});
 				console.log(data.items);
+				var bookNum;
 				for (var i=0; i<data.items.length; i++) {
-
-					// filter only available items
 					if(parseInt(data.items[i].availablecopy) > 0){
-						// result table
-						$("#output").prepend(
-							
-							"<tr>"+
-					            // "<a href=\"detail.html\" target=\"_blank\""+
-					            "<th scope=\"row\"><img class=\"cover\" src=\""+data.items[i].cover+"\"></th>"+
-					            "<td class='title'>"+data.items[i].title+data.items[i].availablecopy+"</td>"+
-					        // "</a>"+
-					        "</tr>"
-					      
-							);
+						bookNum = "red"
+					} else {
+						bookNum = "grey"
 					}
+					// filter only available items
+					// result table
+					$("#output").prepend(
+						
+						"<tr>"+
+				            // "<a href=\"detail.html\" target=\"_blank\""+
+				            "<th scope=\"row\"><img class=\"cover\" src=\""+data.items[i].cover+"\"></th>"+
+				            "<td class='"+ bookNum +"'>"+data.items[i].title+" "+data.items[i].availablecopy+"</td>"+
+				        // "</a>"+ 
+				        "</tr>"
+				      
+						);
 				}
 			},
 			error: function(errorMessage){
