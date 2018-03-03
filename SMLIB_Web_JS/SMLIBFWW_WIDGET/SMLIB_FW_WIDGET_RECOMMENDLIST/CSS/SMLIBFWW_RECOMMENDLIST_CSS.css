@@ -1,22 +1,31 @@
 ﻿.cover {
-	max-width: 150px;
-	max-height: 150px;
 	float:left;
-	/*margin-top: 50px;*/
+	position: relative;
+
 }
 
-/*table {
-	min-width: 400px;
-}*/
+.cover {
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	height: auto;
+	transition: all 0.2s;
+}
 
-.red {
+.cover:hover {
+
+    width:250px;
+    height:auto;
+
+    z-index:999;
+}
+
+
+.red a {
 	color: red;
 }
 
-.grey {
+.grey a {
 	color: grey
 }
 
-/*#output tr {
-	line-height: 150px;
-}*/
