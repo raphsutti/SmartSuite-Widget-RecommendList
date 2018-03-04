@@ -1,7 +1,23 @@
-﻿.cover {
+﻿/*.cover {
 	float:left;
 	position: relative;
+	height: 150px;
+}*/
 
+body {
+	font-family: 'Roboto', serif;
+}
+
+h1 {
+	margin: 20px 0;
+	font-size: 70px;
+	font-weight: 900;
+	font-family: 'Karma', serif;
+}
+
+.mainlist {
+	margin-top: 30px;
+	background: #EEEEEE;
 }
 
 .cover {
@@ -9,23 +25,44 @@
 	display: inline-block;
 	width: 150px;
 	height: auto;
-	transition: all 0.2s;
+	transition: all 0.1s;
+	border: 10px #EBD2D2 solid;
 }
 
+.imgcover {
+	position:relative;
+	top: 0;
+	left: 0;
+	min-height: 200px;
+}
+
+/*td {
+	height: 250px;
+}*/
+
 .cover:hover {
-
-    width:250px;
+	position: absolute;
+    width:300px;
     height:auto;
-
+	top:10px; left:10px; 
     z-index:999;
 }
 
 
 .red a {
-	color: red;
+	color: #F55050;
+	font-weight: bold;
 }
 
 .grey a {
 	color: grey
 }
 
+.mainimg {
+	margin: 40px 0;
+	border: 10px #EBD2D2 solid;
+}
+
+.jumbotron {
+	margin-top: 20px;
+}

@@ -6,11 +6,10 @@
 		async: false,
 		dataType: "json",
 		success: function(data){
-
+			var book = data.items;
 			// Reset table to blank
 			$("#output").html("");
-
-			var sorted = data.items.sort(function (a, b) {
+			var sorted = book.sort(function (a, b) {
 				if (a.availablecopy > b.availablecopy) {
   					return -1;
   				}
@@ -19,32 +18,49 @@
  				}
 				return 0;
 			});
-			// console.log(data.items);
-			
-			var bookNum;
-			for (var i=0; i<data.items.length; i++) {
+
+			// initialise colour variable
+			var copyColour;
+			for (var i=0; i<book.length; i++) {
 				// display grey colour if 0 available copy and red if >0
-				if(parseInt(data.items[i].availablecopy) > 0){
-					bookNum = "red"
+				if(parseInt(book[i].availablecopy) > 0){
+					copyColour = "red"
 				} else {
-					bookNum = "grey"
+					copyColour = "grey"
 				}
+
 				// result table
 				$("#output").prepend(
-					
 					"<tr class='clickable-row'>"+
-			            "<th scope='row'><img class='cover' src='"+data.items[i].cover+"''></th>"+
-			            "<td class='"+ bookNum +"'><a href='"+ data.items[i].bookid +"' target='_blank'>"+data.items[i].title+" "+data.items[i].availablecopy+"</a></td>"+
+			            "<th style='width: 60%' scope='row'><div class='imgcover'><img class='cover' src='"+book[i].cover+"''></div></th>"+
+			            "<td class='"+ copyColour +"'><a href='detail.html' data-id='" + book[i].bookid + "' target='_blank'>"+book[i].title+" "+book[i].availablecopy+"</a></td>"+
 			        "</tr>"
 					);
-				$(".clickable-row").click(function() {
-					console.log($(this).find("a").attr("href"))
+
+				// set click listener
+				$(".clickable-row").unbind().click(function() {
+					// find book id stored in "data-id" in a tag
+					id = $(this).find("a").attr("data-id")
+					// console.log(book);
+					// 
+					var result = book.filter(function(obj) {
+					  return obj.bookid == id;
+					});
+
+					// loop through object to store into localStorage
+					for (var key in result[0]) {
+						if (result[0].hasOwnProperty(key)) {
+							localStorage.setItem(key, result[0][key])
+						}
+					}
+
+					// storage = localStorage.setItem(result)
+					// console.log(result[0])
+					// console.log(localStorage)
 					// window.location = $(this).find("a").attr("href") +".html";
 				});
 			}
 
-		var lib = data.items
-		console.log(lib)
 		},
 		error: function(errorMessage){
 			alert("Error");
