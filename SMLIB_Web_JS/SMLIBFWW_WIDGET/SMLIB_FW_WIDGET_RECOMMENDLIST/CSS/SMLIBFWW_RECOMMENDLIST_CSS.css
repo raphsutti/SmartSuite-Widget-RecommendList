@@ -1,15 +1,8 @@
-﻿/*.cover {
-	float:left;
-	position: relative;
-	height: 150px;
-}*/
-
-body {
+﻿body {
 	font-family: 'Roboto', serif;
 }
 
 h1 {
-	/* margin: 20px 0; */
 	font-size: 60px;
 	font-weight: 1000;
 	font-family: 'Karma', serif;

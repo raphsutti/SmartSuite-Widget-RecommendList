@@ -29,21 +29,19 @@
 					copyColour = "grey"
 				}
 
-				// result table
+				// populates result table
 				$("#output").prepend(
 					"<tr class='clickable-row'>" +
 			            "<th style='width: 60%' scope='row'><div class='imgcover'><img class='cover' src='" + book[i].cover + "''></div></th>" +
 									"<td class='" + copyColour + "'><a href='detail.html' data-id='" + book[i].bookid + "'target='_blank'>" + book[i].title + "</a></td>" +
-									// "<tr class='"+ copyColour +"'>" + book[i].availablecopy + "</td>" +
 			        "</tr>"
 					);
 
 				// set click listener
 				$(".clickable-row").unbind().click(function() {
+
 					// find book id stored in "data-id" in a tag
 					id = $(this).find("a").attr("data-id")
-					// console.log(book);
-					// 
 					var result = book.filter(function(obj) {
 					  return obj.bookid == id;
 					});
@@ -54,12 +52,6 @@
 							localStorage.setItem(key, result[0][key])
 						}
 					}
-
-					// window.location = $(this).data("href");
-					// storage = localStorage.setItem(result)
-					// console.log(result[0])
-					// console.log(localStorage)
-					// window.location = $(this).find("a").attr("href") +".html";
 				});
 			}
 

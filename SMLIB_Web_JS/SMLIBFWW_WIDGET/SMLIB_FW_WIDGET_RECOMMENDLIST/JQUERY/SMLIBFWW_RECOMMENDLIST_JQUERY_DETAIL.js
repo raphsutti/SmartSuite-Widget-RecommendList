@@ -1,5 +1,5 @@
 ﻿$(document).ready(function(){
-	// console.log(id)
+	// populate data stored in localStorage from index page
 	$("#output").prepend(
 		"<h2>" + localStorage.title + "</h2>" +
 		"<h3>" + localStorage.author + "</h3>" +
@@ -10,5 +10,4 @@
 		"<p>isbn: " + localStorage.isbn + "</p>" +
 		"<p>Available copy: " + localStorage.availablecopy + "</p>"
 		);
-
 })
