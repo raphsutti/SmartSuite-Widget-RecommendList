@@ -1,8 +1,8 @@
 ﻿$(document).ready(function(){
 	// console.log(id)
 	$("#output").prepend(
-		"<h1>" + localStorage.title + "</h1>" +
-		"<h2>Author: " + localStorage.author + "</h2>" +
+		"<h2>" + localStorage.title + "</h2>" +
+		"<h3>" + localStorage.author + "</h3>" +
 		"<img src='" + localStorage.cover + "' class='mainimg'>" +
 		"<p>Media: " + localStorage.media + "</p>" +
 		"<p>Location: " + localStorage.location + "</p>" +

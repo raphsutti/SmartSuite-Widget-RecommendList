@@ -31,9 +31,10 @@
 
 				// result table
 				$("#output").prepend(
-					"<tr class='clickable-row'>"+
-			            "<th style='width: 60%' scope='row'><div class='imgcover'><img class='cover' src='"+book[i].cover+"''></div></th>"+
-			            "<td class='"+ copyColour +"'><a href='detail.html' data-id='" + book[i].bookid + "' target='_blank'>"+book[i].title+" "+book[i].availablecopy+"</a></td>"+
+					"<tr class='clickable-row'>" +
+			            "<th style='width: 60%' scope='row'><div class='imgcover'><img class='cover' src='" + book[i].cover + "''></div></th>" +
+									"<td class='" + copyColour + "'><a href='detail.html' data-id='" + book[i].bookid + "'target='_blank'>" + book[i].title + "</a></td>" +
+									// "<tr class='"+ copyColour +"'>" + book[i].availablecopy + "</td>" +
 			        "</tr>"
 					);
 
@@ -54,6 +55,7 @@
 						}
 					}
 
+					// window.location = $(this).data("href");
 					// storage = localStorage.setItem(result)
 					// console.log(result[0])
 					// console.log(localStorage)
