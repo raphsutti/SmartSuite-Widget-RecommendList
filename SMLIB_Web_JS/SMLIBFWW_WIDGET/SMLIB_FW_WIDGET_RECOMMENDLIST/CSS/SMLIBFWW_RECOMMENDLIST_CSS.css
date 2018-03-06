@@ -78,7 +78,11 @@ h2 {
 	
 }
 
-a {
+td > a {
 	display: block;
 	margin-right: 10%;
+}
+
+footer {
+	text-align: center;
 }
